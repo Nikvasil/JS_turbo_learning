@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: darkorange;
+    color: white;
+    font-size: 1.3rem;
+    padding: 0.9rem;
+}
+
+.header__list-item {
+    display: inline;
+    padding: 1.6rem;
+    cursor: pointer;
+}
+
+.header__list {
+    text-align: right;
+}
+
+.main {
+    max-height: 500px;
+}
+
+.img__wrapper {
+    background-color: #eeeeee8e;
+    padding: 5rem;
+    margin-bottom: 1rem;
+}
+
+.img {
+    display: block;
+    margin: 0 auto;
+}
+
+.shelby,
+.img {
+    border: none;
+    border-radius: 0.8rem;
+    width: 350px;
+    height: 250px;
+}
+
+input {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    width: 8rem;
+    height: 2rem;
+    border: none;
+    font-family: "Franklin Gothic Book", serif;
+    background-color: darkorange;
+    color: white;
+    cursor: pointer
+}
+
+p {
+    display: inline;
+    height: 200px;
+}
+
+.text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.text {
+    display: inline-block;
+    margin-left: 1rem;
+}
+a {
+    text-decoration: none;
+}
+
+.papadobr {
+    display: block;
+    float: left;
+    width: 350px;
+    height: 250px;
+    border-radius: 2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.main > p {
+    margin: 20px;
+}
