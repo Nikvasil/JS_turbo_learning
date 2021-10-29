@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> While/For Exercise #7 </title>
+</head>
+<body>
+<script>
+  'use strict';
+
+  let number;
+
+  number = prompt("Enter your number:");
+
+  for (let i = 2; i < number; i++)
+  {
+      let dividerCounter = 0;
+      for (let j = 1; j < i + 1; j++)
+      {
+          if (i % j === 0)
+          {
+              dividerCounter++;
+          }
+      }
+      if (dividerCounter > 2)
+      {
+          alert(i);
+      }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Login Check </title>
+</head>
+<body>
+<script>
+    'use strict';
+
+    let login;
+    let password;
+
+    login = prompt("Enter your login:");
+
+    if (login === "Admin")
+    {
+        password = prompt("Enter your password:");
+
+        if (password === "Я главный")
+        {
+            alert("Welcum!");
+        }
+        else if (password === "" || password == null)
+        {
+            alert("Denied");
+        }
+        else
+        {
+            alert("Incorrect password!");
+        }
+
+    }
+    else if (login === "" || login == null)
+    {
+        alert("Denied");
+    }
+    else
+    {
+        alert("Unknown user");
+    }
+</script>
+</body>
+</html>
