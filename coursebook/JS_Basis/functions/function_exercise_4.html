@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Function Exercise #4</title>
+</head>
+<body>
+<script>
+    'use strict';
+
+    let x, n;
+
+    x = prompt("Enter x:");
+    n = prompt("Enter n (power):");
+
+    function calcPow(x, n)
+    {
+        let xInPower = 1;
+
+        for (let i = 0; i < n; i++)
+        {
+            xInPower *= x;
+        }
+
+        return xInPower;
+    }
+
+    alert(calcPow(x, n));
+</script>
+</body>
+</html>
