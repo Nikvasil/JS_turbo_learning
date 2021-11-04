@@ -1,3 +1,11 @@
+'use strict';
+
+let userList = [];
+let currentUserId;
+
+showGreeting();
+getMenuChoice(userList);
+
 function showGreeting()
 {
     alert("Welcome!");
