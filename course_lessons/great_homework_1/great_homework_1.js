@@ -6,18 +6,15 @@ let currentUserId;
 showGreeting();
 getMenuChoice(userList);
 
-function showGreeting()
-{
+function showGreeting() {
     alert("Welcome!");
 }
 
-function showGoodbye()
-{
+function showGoodbye() {
     alert("See you soon!");
 }
 
-function showMenu()
-{
+function showMenu() {
     let choice;
 
     choice = prompt(
@@ -31,10 +28,8 @@ function showMenu()
     return choice;
 }
 
-function getMenuChoice()
-{
-    switch(showMenu())
-    {
+function getMenuChoice() {
+    switch(showMenu()) {
         case 'a' :
             registration();
             break;
@@ -56,44 +51,36 @@ function getMenuChoice()
     }
 }
 
-function getMenuReturn()
-{
+function getMenuReturn() {
     return confirm("Do you want to return to the menu?");
 }
 
-function returnMenu()
-{
-    if (getMenuReturn())
-    {
+function returnMenu() {
+    if (getMenuReturn()) {
         getMenuChoice();
-    }
-    else
-    {
+    } else {
         showGoodbye();
     }
 }
 
-function addNewUser(firstName, lastName, userEmail, userPassword)
-{
+function addNewUser(firstName, lastName, userEmail, userPassword) {
     let newUser = {
-        firstName : firstName,
-        lastName : lastName,
-        userEmail : userEmail,
-        userPassword : userPassword
+        firstName,
+        lastName,
+        userEmail,
+        userPassword
     };
 
     userList.push(newUser);
 }
 
 
-function showNewUser()
-{
+function showNewUser() {
     alert(userList[userList.length - 1].firstName + " " +
         userList[userList.length - 1].lastName + " was successfully added");
 }
 
-function registration()
-{
+function registration() {
     let firstName, lastName, userEmail, userPassword;
 
     firstName = prompt("Enter your first name:");
@@ -106,14 +93,11 @@ function registration()
     returnMenu();
 }
 
-function checkEmail(userEmail)
-{
+function checkEmail(userEmail) {
     let emailCheck = false;
 
-    for (let i = 0; i < userList.length; i++)
-    {
-        if (userEmail === userList[i].userEmail)
-        {
+    for (let i = 0; i < userList.length; i++) {
+        if (userEmail === userList[i].userEmail) {
             emailCheck = true;
             break;
         }
@@ -122,14 +106,11 @@ function checkEmail(userEmail)
     return emailCheck;
 }
 
-function getEmailId(userEmail)
-{
+function getEmailId(userEmail) {
     let emailId;
 
-    for (let i = 0; i < userList.length; i++)
-    {
-        if (userEmail === userList[i].userEmail)
-        {
+    for (let i = 0; i < userList.length; i++) {
+        if (userEmail === userList[i].userEmail) {
             emailId = i;
             break;
         }
@@ -138,34 +119,26 @@ function getEmailId(userEmail)
     return emailId;
 }
 
-function checkPassword(userEmail, userPassword)
-{
-    if (userList[getEmailId(userEmail)].userPassword === userPassword)
-    {
+function checkPassword(userEmail, userPassword) {
+    if (userList[getEmailId(userEmail)].userPassword === userPassword) {
         currentUserId = getEmailId(userEmail);
         alert("Welcome, " + userList[getEmailId(userEmail)].firstName + " " +
             userList[getEmailId(userEmail)].lastName + "!");
-    }
-    else
-    {
+    } else {
         alert("Incorrect password!");
         returnMenu();
     }
 }
 
-function loginIn()
-{
+function loginIn() {
     let userEmail, userPassword;
 
     userEmail = prompt("Enter your email:");
 
-    if(checkEmail(userEmail))
-    {
+    if(checkEmail(userEmail)) {
         userPassword = prompt("Enter your password:");
         checkPassword(userEmail, userPassword);
-    }
-    else
-    {
+    } else {
         alert("No such user found!");
         returnMenu();
     }
@@ -173,12 +146,10 @@ function loginIn()
     returnMenu();
 }
 
-function showUserList()
-{
+function showUserList() {
     let userNames = "";
 
-    for(let i = 0; i < userList.length; i++)
-    {
+    for(let i = 0; i < userList.length; i++) {
         userNames += i + ")" + " " + userList[i].firstName + " " + userList[i].lastName + "\n";
     }
 
@@ -186,8 +157,7 @@ function showUserList()
     returnMenu();
 }
 
-function showChangeMenu()
-{
+function showChangeMenu() {
     let choice;
 
     choice = prompt(
@@ -200,44 +170,47 @@ function showChangeMenu()
     return choice;
 }
 
-function changeFirstName()
-{
+function changeFirstName() {
     let newFirstName;
+
     newFirstName = prompt("Enter new first name:");
     userList[currentUserId].firstName = newFirstName;
     alert("First name was successfully changed!");
+
     getMenuChoice();
 }
 
-function changeLastName()
-{
+function changeLastName() {
     let newLastName;
+
     newLastName = prompt("Enter new last name:");
     userList[currentUserId].lastName = newLastName;
     alert("Last name was successfully changed!");
+
     getMenuChoice();
 }
 
-function changeEmail()
-{
+function changeEmail() {
     let newEmail;
+
     newEmail = prompt("Enter new email name:");
     userList[currentUserId].userEmail = newEmail;
     alert("Email was successfully changed!");
+
     getMenuChoice();
 }
 
-function changePassword()
-{
+function changePassword() {
     let newPassword;
+
     newPassword = prompt("Enter new first name:");
     userList[currentUserId].userPassword = newPassword;
     alert("Password was successfully changed!");
+
     getMenuChoice();
 }
 
-function changeUserData()
-{
+function changeUserData() {
     if(currentUserId !== undefined) {
         switch (showChangeMenu()) {
             case 'a' :
@@ -256,15 +229,12 @@ function changeUserData()
                 alert("incorrect input");
                 getMenuChoice();
         }
-    }
-    else
-    {
+    } else {
         alert("You are not authorized!");
         getMenuChoice();
     }
 }
 
-function exit()
-{
+function exit() {
     showGoodbye();
 }
