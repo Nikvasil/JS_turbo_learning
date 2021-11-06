@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Object Exercise 5 </title>
+</head>
+<body>
+<script>
+  'use script';
+
+  let menu = {
+      width: 200,
+      height: 300,
+      title: "My menu"
+  };
+
+  multiplyNumeric(menu);
+
+  function  multiplyNumeric(menu) {
+      for (let key in menu) {
+          if (isNaN(menu[key])) continue;
+          menu[key] *= 2;
+      }
+  }
+
+  let output = "";
+
+  for (let key in menu) {
+      output += key + " " + menu[key] + "\n";
+  }
+
+  alert(output);
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Object Exercise #2 </title>
+</head>
+<body>
+<script>
+  'use strict';
+
+  let schedule = {};
+
+  alert( isEmpty(schedule) ); // true
+
+  schedule["8:30"] = "get up";
+
+  alert( isEmpty(schedule) ); // false
+
+  function isEmpty(obj) {
+    let i = 0;
+
+    for (let key in obj) i++;
+
+    return (i === 0);
+  }
+</script>
+</body>
+</html>
