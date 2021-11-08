@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> .this Exercise #4 </title>
+</head>
+<body>
+<script>
+    'use strict';
+
+    let calculator = {
+        read() {
+            let a = +prompt("Enter your first number:");
+            let b = +prompt("Enter your second number:");
+            calculator.a = a;
+            calculator.b = b;
+        },
+
+        sum() {
+            return this.a + this.b;
+        },
+
+        mul() {
+            return this.a * this.b;
+        }
+    }
+
+    calculator.read();
+    alert(calculator.sum());
+    alert(calculator.mul());
+</script>
+</body>
+</html>
