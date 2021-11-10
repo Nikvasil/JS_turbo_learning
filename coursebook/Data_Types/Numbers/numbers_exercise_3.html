@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Numbers Exercise 3 </title>
+</head>
+<body>
+<script>
+  'use strict';
+
+  function readNumber() {
+
+    let a;
+
+    a = prompt("Enter a number:");
+
+    if (isNaN(a))
+    {
+      alert("You must enter a number!");
+      return readNumber();
+    }
+    else
+    {
+      alert(a);
+    }
+  }
+
+  readNumber();
+</script>
+</body>
+</html>

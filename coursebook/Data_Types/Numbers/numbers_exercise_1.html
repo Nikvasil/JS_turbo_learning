@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Numbers Exercise #1 </title>
+</head>
+<body>
+<script>
+  'use strict';
+
+  function calcSum() {
+
+      let a, b;
+
+      a = prompt("Enter the first number:");
+      b = prompt("Enter the second number:");
+
+      if (isNaN(a) || isNaN(b))
+      {
+          alert("You must enter a number!");
+          return calcSum();
+      }
+      else
+      {
+          return +a + +b;
+      }
+  }
+
+  alert(calcSum());
+</script>
+</body>
+</html>
