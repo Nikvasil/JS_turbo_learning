@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> String Exercise 4 </title>
+</head>
+<body>
+<script>
+  'use strict';
+
+  let str = prompt("Enter a string");
+
+  function extractCurrencyValue(str) {
+
+      return parseInt(str.match(/\d+/));
+  }
+
+  alert(extractCurrencyValue(str));
+</script>
+</body>
+</html>

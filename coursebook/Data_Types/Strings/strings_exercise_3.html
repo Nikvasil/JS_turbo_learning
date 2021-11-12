@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> String Exercise 3 </title>
+</head>
+<body>
+<script>
+    'use strict';
+
+    let str = prompt("Enter a string");
+    let maxLength = prompt("Enter max length");
+
+    function truncate(str, maxLength) {
+
+        if (str.length > maxLength) {
+            return str.slice(0, maxLength) + "...";
+        } else
+        {
+            return str;
+        }
+    }
+
+    alert(truncate(str, maxLength));
+</script>
+</body>
+</html>

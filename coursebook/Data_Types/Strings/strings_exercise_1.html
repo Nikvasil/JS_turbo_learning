@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> String Exercise #1 </title>
+</head>
+<body>
+<script>
+    'use strict';
+
+    let str = prompt("Enter a string:");
+
+    function ucFirst(str) {
+
+        str = str[0].toUpperCase() + str.slice(1)
+        return str;
+    }
+
+    alert(ucFirst(str));
+</script>
+</body>
+</html>
