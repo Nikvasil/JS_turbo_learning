@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Array Methods Exercise 1 </title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+
+        let str = prompt("Enter your string:");
+
+        function camelize(str) {
+            let arr = str.split('-')
+
+            arr.map(
+                (item, index) => index === 0 ? item : item[0].toUpperCase() + item.slice(1)
+            )
+
+            alert(arr.join(''));
+        }
+
+        camelize(str);
+    </script>
+</body>
+
+</html>
