@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Array Methods Exercise 9 </title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+
+        let vasya = { name: "Вася", age: 25 };
+        let petya = { name: "Петя", age: 30 };
+        let masha = { name: "Маша", age: 28 };
+
+        let arr = [vasya, petya, masha];
+
+        function sortByAge(arr) {
+            arr.sort( (a, b) => a.age - b.age );
+        }
+
+        sortByAge(arr);
+
+        alert(arr[0].name); 
+        alert(arr[1].name); 
+        alert(arr[2].name); 
+    </script>
+</body>
+
+</html>
