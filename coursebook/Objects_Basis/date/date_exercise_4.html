@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Date Exercise 4 </title>
+</head>
+
+<body>
+    <script>
+        'use script';
+
+        function getDateAgo(date, days) {
+            let newDate = new Date(date);
+
+            newDate.setDate(date.getDate() - days);
+            return newDate.getDate();
+        }
+
+        let date = new Date(2022, 1, 2);
+
+        alert(getDateAgo(date, 1));
+        alert(getDateAgo(date, 2));
+        alert(getDateAgo(date, 365));
+    </script>
+</body>
+
+</html>

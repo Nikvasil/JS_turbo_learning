@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Date Exercise 8 </title>
+</head>
+
+<body>
+    <script>
+        'use script';
+
+        function formatDate(date) {
+            let now = new Date();
+            let diff = now - date;
+            let sec = diff / 1000;
+            let min = diff / 60000;
+
+            if (diff <= 1000) return "прямо сейчас";
+            else if (sec <= 60)
+                return sec + " сек. назад";
+            else if (min <= 60)
+                return min + " мин. назад";
+            else {
+                let d = date;
+                d = [
+                    '0' + d.getDate(),
+                    '0' + (d.getMonth() + 1),
+                    '' + d.getFullYear(),
+                    '0' + d.getHours(),
+                    '0' + d.getMinutes()
+                ].map(component => component.slice(-2)); 
+
+                return d.slice(0, 3).join('.') + ' ' + d.slice(3).join(':');
+            }
+        }
+
+        alert(formatDate(new Date(new Date - 1)));
+        alert(formatDate(new Date(new Date - 30 * 1000)));
+        alert(formatDate(new Date(new Date - 5 * 60 * 1000)));
+        alert(formatDate(new Date(new Date - 86400 * 1000)));
+    </script>
+</body>
+
+</html>

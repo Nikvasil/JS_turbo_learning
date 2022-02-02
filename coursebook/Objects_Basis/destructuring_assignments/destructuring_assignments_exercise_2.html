@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Destructuring Assignments Exercise 2 </title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        let salaries = {
+            "John": 100,
+            "Pete": 300,
+            "Mary": 250
+        };
+
+        function topSalary(obj)
+        {
+            let max = 0;
+            let employee;
+
+            for (const [name, salary] of Object.entries(obj)) {
+                if (salary > max) {
+                    max = salary;
+                    employee = name;
+                }
+            }
+
+            return employee;
+        }
+
+        alert(topSalary(salaries));
+    </script>
+</body>
+
+</html>

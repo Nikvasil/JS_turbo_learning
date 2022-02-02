@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Date Exercise 2 </title>
+</head>
+
+<body>
+    <script>
+        'use script';
+
+        function getWeekDay(date) {
+            switch (date.getDay()) {
+                case 0: return "ВС";
+                case 1: return "ПН";
+                case 2: return "ВТ";
+                case 3: return "СР";
+                case 4: return "ЧТ";
+                case 5: return "ПТ";
+                case 6: return "СБ";
+            }
+        }
+
+        let date = new Date(2022, 1, 2);  
+
+        alert(getWeekDay(date)); 
+    </script>
+</body>
+
+</html>

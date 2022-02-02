@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Date Exercise 6 </title>
+</head>
+
+<body>
+    <script>
+        'use script';
+
+        function getSecondsToday() {
+            let date = new Date();
+
+            return date.getHours() * 3600 + 
+            date.getMinutes() * 60 + 
+            date.getSeconds();
+        }
+
+        alert(getSecondsToday());
+    </script>
+</body>
+
+</html>
