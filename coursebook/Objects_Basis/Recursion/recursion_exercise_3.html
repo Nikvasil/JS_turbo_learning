@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Recursive Exercise 3 </title>
+</head>
+
+<body>
+    <script>
+        'use script';
+
+        function fib(n) {
+            return n <= 1 ? n : fib(n - 1) + fib(n - 2);
+        }
+
+        alert(fib(3)); 
+        alert(fib(7)); 
+        alert(fib(77));
+    </script>
+</body>
+
+</html>

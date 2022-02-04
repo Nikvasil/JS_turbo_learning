@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Recursive Exercise 4 </title>
+</head>
+
+<body>
+    <script>
+        'use script';
+
+        function recursivePrintList(list) {
+            alert(list.value);
+
+            if (list.next) {
+                recursivePrintList(list.next);
+            }
+        }
+
+        function loopPrintList(list) {
+            let tmp = list;
+
+            while (tmp) {
+                alert(tmp.value);
+                tmp = tmp.next;
+            }
+        }
+
+        let list = {
+            value: 1,
+            next: {
+                value: 2,
+                next: {
+                    value: 3,
+                    next: {
+                        value: 4,
+                        next: null
+                    }
+                }
+            }
+        };
+
+        //recursivePrintList(list);
+        loopPrintList(list);
+    </script>
+</body>
+
+</html>
