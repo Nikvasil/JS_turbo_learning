@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> setTimeout setInterval </title>
+</head>
+
+<body>
+    <script>
+        'use script';
+
+        /* setInterval method
+        function printNumbers(from, to) {
+            let current = from;
+            let timerId = setInterval(() => alert(current++), 1000);
+            setTimeout(() => { clearInterval(timerId); alert(to); }, to * 1000);
+        }
+
+        printNumbers(1, 5);*/
+
+        //setTimeout method
+        function printNumbers(from, to) {
+            let current = from;
+
+            setTimeout(function tick() {
+                alert(current);
+                if (current < to) {
+                    setTimeout(tick, 1000);
+                }
+                current++;
+            }, 1000);
+        }
+
+        printNumbers(1, 5);
+    </script>
+</body>
+
+</html>

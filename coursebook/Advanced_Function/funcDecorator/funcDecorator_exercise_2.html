@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> funcDecorator Exercise 2 </title>
+</head>
+
+<body>
+    <script>
+        'use script';
+
+        function f(x) {
+            alert(x);
+        }
+
+        function delay(f, ms) {
+
+            return function() {
+                setTimeout(f.apply(this, arguments), ms);
+            } 
+        }
+
+        let f1000 = delay(f, 1000);
+        let f1500 = delay(f, 1500);
+
+        f1000("test");
+        f1500("test");
+    </script>
+</body>
+
+</html>
