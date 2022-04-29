@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Generator Exercise #1 </title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        function* pseudoRandom(seed) {
+            let value = seed;
+
+            while (true) {
+                value = value * 16807 % 2147483647
+                yield value;
+            }
+
+        };
+
+        let generator = pseudoRandom(1);
+
+        alert(generator.next().value); 
+        alert(generator.next().value); 
+        alert(generator.next().value);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> User Exercise </title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        class FormatError extends SyntaxError {
+            constructor(message) {
+                super(message);
+                this.name = "FormatError";
+            }
+        }
+
+        let err = new FormatError("ошибка форматирования");
+
+        alert(err.message);
+        alert(err.name);
+        alert(err.stack);
+
+        alert(err instanceof FormatError);
+        alert(err instanceof SyntaxError);
+    </script>
+</body>
+
+</html>
